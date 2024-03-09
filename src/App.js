@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Fragment } from "react";
+import Layout from "./components/layout/Layout";
+import AuthForm from "./components/auth/AuthForm";
+import { Route, Router, Routes } from "react-router-dom";
+import Welcome from "./components/welcome/Welcome";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Router>
+        <Routes>
+          <div>Hello</div>
+          {/* <Route path="/" element={<AuthForm />} />
+          <Route path="/welcome" element={<Welcome />} /> */}
+          {/* <Route path="*">
+            <Redirect to="/" />
+          </Route> */}
+        </Routes>
+      </Router>
+    </Layout>
   );
 }
 
 export default App;
+
+// dj
